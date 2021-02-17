@@ -3,5 +3,5 @@ USE euro_cup_2016;
 SELECT rm.referee_name, COUNT(DISTINCT pb.player_id) as NumberOfBookings FROM match_mast ma JOIN player_booked pb ON ma.match_no = pb.match_no
 JOIN referee_mast rm ON ma.referee_id = rm.referee_id
 GROUP BY ma.referee_id, rm.referee_name
-ORDER BY 2 DESC
+ORDER BY NumberOfBookings DESC
 limit 1
