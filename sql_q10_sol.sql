@@ -3,4 +3,4 @@ USE euro_cup_2016;
 # Liverpool F.C. playing for England in EURO Cup 2016.
 
 SELECT * from player_mast PM JOIN soccer_country sc ON PM.team_id = sc.country_id
-AND sc.country_name = 'England' AND pm.playing_club = 'Liverpool'
+WHERE sc.country_name = 'England' AND pm.playing_club = 'Liverpool'
